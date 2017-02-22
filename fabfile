@@ -1,0 +1,9 @@
+from fabric.api import run
+
+def host_type():
+    run('uname -s')
+
+def task():
+	with prefix('workon sysadmin'):
+		run('uptime')
+		run('uname -a')
